@@ -1,0 +1,15 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overscroll-behavior: none;
+	margin: 0;
+	
+	&,
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+	}
+}
