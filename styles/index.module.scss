@@ -1,3 +1,7 @@
+@mixin text-off-white {
+	color: transparentize(white, 0.3);
+}
+
 .root {
 	min-height: 100vh;
 	padding: 20px;
@@ -6,6 +10,18 @@
 }
 
 .initialText {
+	@include text-off-white;
+	
+	font-size: 20px;
 	font-weight: bold;
-	color: white;
+}
+
+.container {
+	margin-top: 20px;
+	transition: opacity 0.3s;
+}
+
+.disabledContainer {
+	pointer-events: none;
+	opacity: 0.5;
 }

@@ -19,7 +19,8 @@ export default () => {
 		return () => clearInterval(interval)
 	}, [setCount])
 	
-	return useMemo(() => (
-		INITIAL_TEXT.slice(0, count)
-	), [count])
+	return [
+		useMemo(() => INITIAL_TEXT.slice(0, count), [count]),
+		count === INITIAL_TEXT.length
+	] as const
 }
